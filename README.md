@@ -1,5 +1,5 @@
 # Network_Anomaly_Detection_CIRCE
-Network Anomaly Detection application customized for CIRCE framework
+Network Anomaly Detection application customized for CIRCE framework. CIRCE accepts pipelined computations described in a form of a Directed Acyclic Graph (DAG). It requires that each task in a graph is written as a Python function in a separate file. 
 
 # Network Anomaly Detection: Task Graph
 The application task graph is inspired from Hashdoop [1, 2], where a MapReduce framework is used for anomaly detection. We have modified the codes from [2] to suit our purpose.
@@ -13,6 +13,7 @@ Convert the pcap file to a text file using [Ipsumdump](http://www.read.seas.harv
 ```
 ipsumdump -tsSdDlpF -r botnet-capture-20110810-neris.pcap > botnet_summary.ipsum
 ```
+Signle input file, 1botnet.ipsum, is given in a repository.
 
 ## Code Structure
 - `local_pro.py`: Process the Ipsum file locally and split the traffic into multiple independent streams based on the hash value of the IP adresses.
@@ -21,6 +22,14 @@ ipsumdump -tsSdDlpF -r botnet-capture-20110810-neris.pcap > botnet_summary.ipsum
 - `astute_detector<SPLIT_ID>.py`: An implementation of ASTUTE anomaly detector [3] from the repository [2].
 - `fusion_center<SPLIT_ID>.py`: Combine the detected anomalies by different detectors for the particular split.
 - `global_fusion.py`: Collect all the anomalies from different splits and combine the detected anomalies.
+
+## Execution
+
+This code is meant to be executed with CIRCE. You can also test the application on your machine. First change the input/output file paths in each Python script and run the following command for each task, in the order given by DAG:
+
+```
+puthon3 name_of_the_task.pu
+```
 
 # References
 [1] Romain Fontugne, Johan Mazel, and Kensuke Fukuda. "Hashdoop: A mapreduce framework for network anomaly detection." Computer Communications Workshops (INFOCOM WORKSHOPS), IEEE Conference on. IEEE, 2014.
