@@ -3,6 +3,9 @@ Network Anomaly Detection application customized for CIRCE framework
 
 # Network Anomaly Detection: Task Graph
 The application task graph is inspired from Hashdoop [1, 2], where a MapReduce framework is used for anomaly detection. We have modified the codes from [2] to suit our purpose.
+Application DAG is shown below.
+
+ ![alt tag](https://github.com/ANRGUSC/Network_Anomaly_Detection_CIRCE/blob/master/DAG.jpg)
 
 ## Generating the input files
 Convert the pcap file to a text file using [Ipsumdump](http://www.read.seas.harvard.edu/~kohler/ipsumdump/) as follows:
