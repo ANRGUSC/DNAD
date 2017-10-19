@@ -20,7 +20,6 @@ import numpy as np
 from copy import deepcopy
 import types
 import time
-import admd
 
 try:
     unicode = unicode
