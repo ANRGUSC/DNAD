@@ -8,7 +8,6 @@
  *     Read license file in main directory for more details  
 """
 
-
 import zlib
 import os
 import time
@@ -29,7 +28,7 @@ def task(onefile, pathin, pathout):
 
     for filename in filelist:
         with open(os.path.join(pathin, filename), 'r') as f:
-            # input comes from STDIN (standard input)
+            
             for line in f:
                 # ignore header
                 if line.startswith('!'):

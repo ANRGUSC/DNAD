@@ -33,7 +33,6 @@ def task(filelist, pathin, pathout):
                     teSec = int(te[0])
                     teUsec = int(te[1])
                     str1 = ('{0};{1};{2}'.format(flow, tsSec, teSec))
-                    #print(str1)
                     outfile.write(str1 + '\n')
 
 if __name__ == '__main__':

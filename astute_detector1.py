@@ -9,7 +9,6 @@
 """
 
 
-
 import sys
 import numpy as np
 import os
@@ -114,10 +113,6 @@ def task(filename, pathin, pathout):
 
                         mean[i] = np.mean(delta[i], 0)
                         std[i] = np.std(delta[i], 0)
-
-                        # testsub = delta[i]
-                        # F= np.size(delta[i], 0);
-                        # Compute K'
 
                         K[i, :] = mean[i] * np.sqrt(np.size(delta[i], 0)) / std[i]
 

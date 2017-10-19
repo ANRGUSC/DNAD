@@ -53,7 +53,7 @@ def get_pkgPerhost(ipsum_filename,pathin):
         print("Packet counts:", pktCount)
         print("Mean:", mean)
         print("Std deviation:", std)
-        print("Threshld:", threshold)
+        print("Threshold:", threshold)
 
         for host, val in pktPerHost.items():
             print(host, val)

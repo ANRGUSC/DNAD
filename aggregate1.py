@@ -14,7 +14,7 @@ import sys
 import time
 
 def task(onefile, pathin, pathout):
-
+    #sleep is added because task needs to wait the entier file to be copied into input folder
     time.sleep(10)
 
     filelist=[]

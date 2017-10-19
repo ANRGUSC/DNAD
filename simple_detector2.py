@@ -19,7 +19,8 @@ ipBinStart = dict()
 
 
 def get_pkgPerhost(ipsum_filename,pathin):
-    nbStd = 2.0  # Detection threshold
+    #Detection threshold
+    nbStd = 2.0  
 
     with open(os.path.join(pathin,ipsum_filename), 'r') as f:
         for line in f:
@@ -54,7 +55,7 @@ def get_pkgPerhost(ipsum_filename,pathin):
         print("Packet counts:", pktCount)
         print("Mean:", mean)
         print("Std deviation:", std)
-        print("Threshld:", threshold)
+        print("Threshold:", threshold)
 
         for host, val in pktPerHost.items():
             print(host, val)

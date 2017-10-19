@@ -96,8 +96,6 @@ def task(filename, pathin, pathout):
                     mean = np.zeros((6, 2))
                     std = np.zeros((6, 2))
 
-
-
                     for i in range(6):
                         # Compute the volume changes
                         if i < 4:
@@ -113,10 +111,6 @@ def task(filename, pathin, pathout):
 
                         mean[i] = np.mean(delta[i], 0)
                         std[i] = np.std(delta[i], 0)
-
-                        # testsub = delta[i]
-                        # F= np.size(delta[i], 0);
-                        # Compute K'
 
                         K[i, :] = mean[i] * np.sqrt(np.size(delta[i], 0)) / std[i]
 
