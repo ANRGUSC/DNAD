@@ -60,7 +60,7 @@ def task(onefile, pathin, pathout):
 
 if __name__ == '__main__':
 
-    filelist= '1botnet_summary.ipsum'
+    filelist= '1botnet.ipsum'
     #change the corresponding path
     task(filelist, '/home/pirate/apac_scheduler/centralized_scheduler_with_profiler/securityapp', '/home/pirate/apac_scheduler/centralized_scheduler_with_profiler/securityapp')
 
