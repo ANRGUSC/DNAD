@@ -1,9 +1,8 @@
 # Network_Anomaly_Detection_CIRCE
-Network Anomaly Detection application customized for CIRCE framework. CIRCE accepts pipelined computations described in a form of a Directed Acyclic Graph (DAG). It requires that each task in a graph is written as a Python function in a separate file. 
+Network Anomaly Detection application customized for CIRCE framework (available here: https://github.com/ANRGUSC/CIRCE). CIRCE accepts pipelined computations described in a form of a Directed Acyclic Graph (DAG). It requires that each task in a graph is written as a Python function in a separate file. 
 
 # Network Anomaly Detection: Task Graph
-The application task graph is inspired from Hashdoop [1, 2], where a MapReduce framework is used for anomaly detection. We have modified the codes from [2] to suit our purpose.
-Application DAG is shown below.
+The application task graph, shown below, is intended for dispersed computing. It is inspired from Hashdoop [1, 2], where a MapReduce framework is used for anomaly detection. We have modified the codes from [2] to suit our purpose.
 
  ![alt tag](https://github.com/ANRGUSC/Network_Anomaly_Detection_CIRCE/blob/master/DAG.jpg)
 
