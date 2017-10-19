@@ -8,9 +8,6 @@
  *     Read license file in main directory for more details  
 """
 
-
-
-import admd
 import os
 import sys
 
