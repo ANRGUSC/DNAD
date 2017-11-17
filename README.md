@@ -12,7 +12,7 @@ Convert the pcap file to a text file using [Ipsumdump](http://www.read.seas.harv
 ```
 ipsumdump -tsSdDlpF -r botnet-capture-20110810-neris.pcap > botnet_summary.ipsum
 ```
-Signle input file, 1botnet.ipsum, is given in a repository.
+Single input file, 1botnet.ipsum, is given in a repository.
 
 ## Code Structure
 - `local_pro.py`: Process the Ipsum file locally and split the traffic into multiple independent streams based on the hash value of the IP adresses.
@@ -27,7 +27,7 @@ Signle input file, 1botnet.ipsum, is given in a repository.
 This code is meant to be executed with CIRCE. You can also test the application on your machine. First change the input/output file paths in each Python script and run the following command for each task, in the order given by DAG:
 
 ```
-puthon3 name_of_the_task.pu
+puthon3 name_of_the_task.py
 ```
 
 # References
