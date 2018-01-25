@@ -6,10 +6,19 @@ University of Southern California
 http://anrg.usc.edu/
 
 Contributors:
-Pranav Sakulkar, October 2017
-Jiatong Wang, October 2017
-Aleksandra Knezevic, October 2017
-Bhaskar Krishnamachari, October 2017
+ * Pranav Sakulkar 
+ * Pradipta Ghosh 
+ * Aleksandra Knezevic 
+ * Jiatong Wang 
+ * Quynh Nguyen 
+ * Jason Tran 
+ * H.V. Krishna Giri Narra 
+ * Zhifeng Lin 
+ * Songze Li 
+ * Ming Yu 
+ * Bhaskar Krishnamachari 
+ * Salman Avestimehr 
+ * Murali Annavaram
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of 
 this software and associated documentation files (the "Software"), to deal with 

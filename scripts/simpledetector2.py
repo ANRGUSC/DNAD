@@ -1,3 +1,14 @@
+"""
+ * Copyright (c) 2017, Autonomous Networks Research Group. All rights reserved.
+ *     contributors: 
+ *      Pranav Sakulkar, October 2017
+ *      Jiatong Wang, October 2017
+ *      Aleksandra Knezevic, October 2017
+ *      Bhaskar Krishnamachari, October 2017
+ *     Read license file in main directory for more details  
+"""
+
+
 import sys
 import numpy as np
 import os
