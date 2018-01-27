@@ -27,5 +27,5 @@ bash -c "ssh-keygen -t rsa -f ~/.ssh/id_rsa -N ''"
 echo "// Setup all Workers"
 for (( i = 1; i <= $1; i++ ))
 do
-    bash -c "cat ~/.ssh/id_rsa.pub | sshpass -p 'anrgapac' ssh n$i -o StrictHostKeyChecking=no 'cat - >> ~/.ssh/authorized_keys'"
+    bash -c "cat ~/.ssh/id_rsa.pub | sshpass -p 'PASSWORD' ssh n$i -o StrictHostKeyChecking=no 'cat - >> ~/.ssh/authorized_keys'"
 done

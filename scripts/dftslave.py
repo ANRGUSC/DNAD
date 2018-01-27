@@ -257,7 +257,7 @@ def matrixMulKernelSlave(MasterID, ID, TP, vector=None, matrix=None):
 
             np.savetxt(productFile, product.view(float))
             masterIP = node_dict['dftdetector' + MasterID]
-            cmd = "sshpass -p 'anrgapac' scp -P 5000 -o StrictHostKeyChecking=no %s %s:%s" % (productFile, masterIP, productFile) 
+            cmd = "sshpass -p 'PASSWORD' scp -P 5000 -o StrictHostKeyChecking=no %s %s:%s" % (productFile, masterIP, productFile) 
             #cmd = "scp %s %s:%s" % (productFile, masterIP, productFile) 
             os.system(cmd)
             end_time = time.time()

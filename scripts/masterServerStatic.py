@@ -167,7 +167,7 @@ def encode_matrix(matrix, encoding):
       print("Slaves_IP", slaveIP)
       np.savetxt(ptFile, encoded, fmt='%i')
       #cmd = "scp %s %s:%s" % (ptFile, slaveIP, ptFile)
-      cmd = "sshpass -p 'anrgapac' scp -P 5000 -o StrictHostKeyChecking=no %s %s:%s" % (ptFile, slaveIP, ptFile) 
+      cmd = "sshpass -p 'PASSWORD' scp -P 5000 -o StrictHostKeyChecking=no %s %s:%s" % (ptFile, slaveIP, ptFile) 
       print("cmd:", cmd)
       os.system(cmd)
 

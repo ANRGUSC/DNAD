@@ -1,0 +1,23 @@
+parent  children
+localpro    aggregate0  aggregate1  aggregate2
+aggregate0  simpledetector0 astutedetector0 dftdetector0    teradetector0
+aggregate1  simpledetector1 astutedetector1 dftdetector1    teradetector1
+aggregate2  simpledetector2 astutedetector2 dftdetector2    teradetector2
+simpledetector0 fusioncenter0
+simpledetector1 fusioncenter1
+simpledetector2 fusioncenter2
+astutedetector0 fusioncenter0
+astutedetector1 fusioncenter1
+astutedetector2 fusioncenter2
+dftdetector0    fusioncenter0  dftslave00  dftslave01  dftslave02
+dftdetector1    fusioncenter1  dftslave10  dftslave11  dftslave12
+dftdetector2    fusioncenter2  dftslave20  dftslave21  dftslave22
+teradetector0   teramaster0   fusioncenter0
+teradetector1   teramaster1   fusioncenter1
+teradetector2   teramaster2   fusioncenter2
+teramaster0     teraslave00    teraslave01    teraslave02 
+teramaster1     teraslave10    teraslave11    teraslave12
+teramaster2     teraslave20    teraslave21    teraslave22
+fusioncenter0   globalfusion
+fusioncenter1   globalfusion
+fusioncenter2   globalfusion

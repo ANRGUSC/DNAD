@@ -1,12 +1,20 @@
 """
  * Copyright (c) 2017, Autonomous Networks Research Group. All rights reserved.
- *     contributors:
- *      Pradipta Ghosh, January 2018
- *      Pranav Sakulkar, October 2017
- *      Jiatong Wang, October 2017
- *      Aleksandra Knezevic, October 2017
- *      Bhaskar Krishnamachari, October 2017
- *     Read license file in main directory for more details  
+ * Contributors:
+ *    Pranav Sakulkar, 
+ *    Pradipta Ghosh, 
+ *    Aleksandra Knezevic, 
+ *    Jiatong Wang, 
+ *    Quynh Nguyen, 
+ *    Jason Tran, 
+ *    H.V. Krishna Giri Narra, 
+ *    Zhifeng Lin, 
+ *    Songze Li, 
+ *    Ming Yu, 
+ *    Bhaskar Krishnamachari, 
+ *    Salman Avestimehr, 
+ *    Murali Annavaram 
+ * Read license file in main directory for more details  
 """
 
 
@@ -30,7 +38,7 @@ def task(filename, pathin, pathout):
 
     # send the input file to the real master
     print("Send file")
-    os.system("sshpass -p 'anrgapac' scp -o StrictHostKeyChecking=no "
+    os.system("sshpass -p 'PASSWORD' scp -o StrictHostKeyChecking=no "
               + "-P " + ssh_port + " " + 
               pathin + "/"+ filename + " root@" +
               realMasterIP + ":/root/TeraSort/Input/data.txt")
@@ -39,7 +47,7 @@ def task(filename, pathin, pathout):
     # Execute uncoded TeraSort
     # For coded TeraSort, replace "uncoded" below by "coded"
     print("Run code")
-    os.system("sshpass -p 'anrgapac' ssh -p" + ssh_port + " " +
+    os.system("sshpass -p 'PASSWORD' ssh -p" + ssh_port + " " +
       realMasterIP + " '/root/TeraSort/Master-Detection.sh uncoded'")
 
     # Download the results
@@ -48,7 +56,7 @@ def task(filename, pathin, pathout):
     while True:
         try:
             print("Downlao file")
-            os.system("sshpass -p 'anrgapac' scp -o" +
+            os.system("sshpass -p 'PASSWORD' scp -o" +
                       " StrictHostKeyChecking=no " + "-P " + ssh_port 
                       + " root@" + realMasterIP +
                       ":/root/TeraSort/Output/result.txt " +
@@ -61,7 +69,7 @@ def task(filename, pathin, pathout):
     # Remove the results from real master
     # For coded TeraSort, replace "result.txt" below by "result-C.txt"
     print("Delete rermote files")
-    os.system("sshpass -p 'anrgapac' ssh -p" + ssh_port + " -o StrictHostKeyChecking=no " + realMasterIP +
+    os.system("sshpass -p 'PASSWORD' ssh -p" + ssh_port + " -o StrictHostKeyChecking=no " + realMasterIP +
               " 'rm /root/TeraSort/Output/result.txt'")
     print("Finished")
 
